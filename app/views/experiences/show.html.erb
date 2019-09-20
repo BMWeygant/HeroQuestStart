@@ -8,7 +8,7 @@ Hp: <%= @experience.hp_rating %><br>
 <h3>Select which Hero you want to embark on  "<%="#{@experience.title}"%>"</h3>
 
 <%= form_for @experience.adventures.last do |f|%>
-  <%= f.collection_select(:hero_id, @heros, :id, :name)%>
+  <%= f.collection_select(:hero_id, @heros, :id, :name) %>
   <%= f.hidden_field :experience_id, :value => @experience.id %>
   <p>
   <%= f.label :little_sister, "Bring your little sister?"%>
